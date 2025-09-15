@@ -85,7 +85,7 @@ int AUList::Getrange() {
     if (ListItems[i] < min) {
       min = ListItems[i];
     }
-    if (ListItems[i] < max) {
+    if (ListItems[i] >max) {
       max = ListItems[i];
     }
   }
@@ -94,11 +94,14 @@ int AUList::Getrange() {
 
 AUList AUList::DuplicateSE(int first, int last) {
   AUList result;
+  if(first < 0 || last >= length || first > last) {
+    throw std::out_of_range("Invalid range");
+  }
 
   for (int i = 0; i < length; i++) {
-    if (ListItems[i] >= first && ListItems[i] <= last) {
+
       result.PutItem(ListItems[i]);
-    }
+
   }
 
 return result;
