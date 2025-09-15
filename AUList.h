@@ -25,9 +25,9 @@ public:
   
   int GetNextItem();//Gets the next element in the list.
 
-  int Getmin(); //Returns the minimum value in the list
+  int getMin(); //Returns the minimum value in the list
 
-  int Getrange(); //Returns the range in the list
+  int getRange(); //Returns the range in the list
 
   int Getduplicates(); //Returns the number of duplicates in the list
 

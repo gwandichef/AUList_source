@@ -60,7 +60,7 @@ void AUList::PrintList() { //simple function to print a list's items in stored o
   std::cout<<")"<<std::endl;
 }
 
-int AUList::Getmin() {
+int AUList::getMin() {
   if (length<1){
   throw std::underflow_error("AUList is empty");
     }
@@ -74,7 +74,7 @@ int AUList::Getmin() {
 
 };
 
-int AUList::Getrange() {
+int AUList::getRange() {
   if (length < 1) {
     throw std::underflow_error("AUList is empty");
   }
@@ -98,8 +98,7 @@ AUList AUList::DuplicateSE(int first, int last) {
     throw std::out_of_range("Invalid range");
   }
 
-  for (int i = 0; i < length; i++) {
-
+  for (int i = first; i <= last; i++){
       result.PutItem(ListItems[i]);
 
   }
